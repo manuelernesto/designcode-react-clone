@@ -1,20 +1,22 @@
 import React from "react";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import styled from "styled-components";
+import { H1, MediumText } from "../styles/TextStyles";
+import { themes } from "../styles/ColorsStyles";
 
 function HeroSection() {
-    return (
-        <Wrapper>
-            <ContentWrapper>
-                <TextWrapper>
-                    <Title>Design <br/> and code React apps</Title>
-                    <Description>Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete
-                        courses
-                        about the best tools.</Description>
-                </TextWrapper>
-            </ContentWrapper>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <ContentWrapper>
+        <TextWrapper>
+          <Title>Design <br /> and code React apps</Title>
+          <Description>Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete
+            courses
+            about the best tools.</Description>
+        </TextWrapper>
+      </ContentWrapper>
+    </Wrapper>
+  );
 }
 
 export default HeroSection;
@@ -35,14 +37,9 @@ const TextWrapper = styled.div`
   gap: 30px;
 `;
 
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 60px;
-  color: white;
+const Title = styled(H1)`
+  color: ${themes.dark.text1};
 `;
 
-const Description = styled.p`
-  font-size: 17px;
-  line-height: 130%;
-`;
+const Description = styled(MediumText)``
 
