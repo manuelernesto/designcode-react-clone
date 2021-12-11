@@ -15,8 +15,8 @@ function HeroSection() {
             courses
             about the best tools.</Description>
           <PurchaseButton
-            title="Get Pro Access"
-            subtitle="$19 per month" />
+            title="Start learning"
+            subtitle="120+ hours of video" />
         </TextWrapper>
       </ContentWrapper>
     </Wrapper>
