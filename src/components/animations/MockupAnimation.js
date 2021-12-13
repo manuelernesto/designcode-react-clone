@@ -16,6 +16,49 @@ export default function MockupAnimation() {
 
 const Wrapper = styled.div`
   position: relative;
+  perspective: 5000;
+
+  div {
+    transform: rotateY(-20deg) rotateX(20deg);
+    transform-origin: bottom left;
+  }
+
+  * {
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  :hover div {
+    transform: rotateY(0deg) rotateX(0deg);
+
+    &.mockup1 {
+      transition-delay: 0.1s;
+
+      transform: translate(-30px, -30px);
+    }
+
+    &.mockup2 {
+      transition-delay: 0.2s;
+      transform: translate(0, -30px);
+    }
+
+    &.mockup3 {
+      transition-delay: 0s;
+    }
+
+    &.mockup4 {
+      transition-delay: 0.1s;
+      transform: translate(-120px, 30px);
+    }
+
+    &.mockup5 {
+      transition-delay: 0.2s;
+      transform: translate(-90px, 30px);
+    }
+
+    :hover {
+      filter: brightness(150%) saturate(120%);
+    }
+  }
 
   .mockup1 {
     position: absolute;
@@ -44,7 +87,7 @@ const Wrapper = styled.div`
     left: 214px;
     top: 0;
 
-    background: url("/images/animations/mockup2.svg"),linear-gradient(198.85deg,
+    background: url("/images/animations/mockup2.svg"), linear-gradient(198.85deg,
     #4316db 12.72%,
     #9076e7 54.49%,
     #a2eeff 100.01%);
@@ -64,7 +107,7 @@ const Wrapper = styled.div`
     left: 37px;
     top: 60px;
 
-    background: url("/images/animations/mockup3.svg"),rgba(23, 12, 61, 0.5);
+    background: url("/images/animations/mockup3.svg"), rgba(23, 12, 61, 0.5);
     border: 0.342305px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(27.3844px);
     /* Note: backdrop-filter has minimal browser support */
