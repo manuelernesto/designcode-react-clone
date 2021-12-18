@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
-import {Link} from "gatsby";
 import MenuButton from "../buttons/MenuButton";
 import {tooltipData} from "../../data/menudata";
 

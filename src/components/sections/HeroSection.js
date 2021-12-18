@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import { H1, MediumText } from "../styles/TextStyles";
 import { themes } from "../styles/ColorsStyles";
 import PurchaseButton from "../buttons/PurchaseButton";
 import MockupAnimation from "../animations/MockupAnimation";
-import Header from "../layout/Header";
 
 function HeroSection() {
   return (
