@@ -1,33 +1,36 @@
 import React from "react";
 import styled from "styled-components";
-import { H1, MediumText } from "../styles/TextStyles";
-import { themes } from "../styles/ColorsStyles";
+import {H1, MediumText} from "../styles/TextStyles";
+import {themes} from "../styles/ColorsStyles";
 import PurchaseButton from "../buttons/PurchaseButton";
 import MockupAnimation from "../animations/MockupAnimation";
+import WaveBackground from "../backgrounds/WaveBackground";
 
 function HeroSection() {
-  return (
-    <Wrapper>
-      <ContentWrapper>
-        <TextWrapper>
-          <Title>Design <br /> and code React apps</Title>
-          <Description>Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete
-            courses
-            about the best tools.</Description>
-          <PurchaseButton
-            title="Start learning"
-            subtitle="120+ hours of video" />
-        </TextWrapper>
-        <MockupAnimation/>
-      </ContentWrapper>
-    </Wrapper>
-  );
+    return (
+        <Wrapper>
+            <WaveBackground/>
+            <ContentWrapper>
+                <TextWrapper>
+                    <Title>Design <br/> and code React apps</Title>
+                    <Description>Don’t skip design. Learn design and code, by building real apps with React and Swift.
+                        Complete
+                        courses
+                        about the best tools.</Description>
+                    <PurchaseButton
+                        title="Start learning"
+                        subtitle="120+ hours of video"/>
+                </TextWrapper>
+                <MockupAnimation/>
+            </ContentWrapper>
+        </Wrapper>
+    );
 }
 
 export default HeroSection;
 
 const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
+  //background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
   overflow: hidden;
 `;
 
