@@ -1,23 +1,40 @@
 import React from "react";
 import {Link} from "gatsby";
-
-
-const menuData = [
-    {title: "Courses", icon: "/images/icons/courses.svg", link: "/courses"},
-    {title: "Tutorials", icon: "/images/icons/tutorials.svg", link: "/tutorials"},
-    {title: "Pricing", icon: "/images/icons/pricing.svg", link: "/pricing"}
-]
-
+import styled from "styled-components";
+import {menuData} from '../../data/menudata';
+import MenuButton from "../buttons/MenuButton";
+import MenuTootip from "../tooltips/MenuTootip";
 
 export default function Header() {
     return (
-        <>
-            {menuData.map((item, index) => (
-                <Link to={item.link} key={index}>
-                    <img src={item.icon} alt={item.title}/>
-                    {item.title}
-                </Link>
-            ))}
-        </>
+        <Wrapper>
+            <Link to="/">
+                <img src="/images/logos/logo.svg" alt="logo"/>
+            </Link>
+            <MenuWrapper count={menuData.length}>
+                {menuData.map((item, index) => (
+                    <MenuButton item={item} key={index}/>
+                ))}
+            </MenuWrapper>
+            <MenuTootip/>
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+  position: absolute;
+  top: 60px;
+  display: grid;
+  grid-template-columns: 44px auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+`
+const MenuWrapper = styled.div`
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(${props => props.count}, auto);
+`
+
+
